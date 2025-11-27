@@ -13,8 +13,8 @@ export async function findUsersForCourse(courseId) {
 
 export default function EnrollmentsDao(db) {
   
-  function findAllEnrollments() {
-    return db.enrollments;
+  async function findAllEnrollments() {
+    return await model.find({});
   }
 
   function findEnrollmentsForUser(userId) {
